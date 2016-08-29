@@ -1,0 +1,104 @@
+.item-block {
+    position: relative; /*обязательно, для последующего использ mask и content*/
+    margin: 10px auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /*обязательно !!!*/
+    text-align: center;
+    border: 10px solid gray;
+    background: #fff;
+}
+
+.item-block .mask {
+    position: absolute;
+    width: 280px; /*размер соответсвует род блоку*/
+    height: 180px; /*размер соответсвует род блоку*/
+    top: 0px;
+//    left: 10px;
+    overflow: hidden;
+}
+
+.item-block img {
+    display: block;
+    position: relative;
+}
+
+.item-block h2 {
+	position: relative;
+    margin: 10px 0;
+    padding: 5px;
+    color: #fff;
+    background: #000;
+}
+
+.item-block p {
+	position: relative;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #fff;
+}
+
+.item-block .info {
+    padding: 7px 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+}
+
+.item-block .info:hover {
+    opacity: .5;
+}
+
+/*Стили для hover*/
+/*Предварительно для view-first*/
+.view-first img {
+     transition: all 0.2s linear; // задает плавную работу для эффектов
+}
+
+.view-first .mask {
+     opacity: 0; // блок изначально делаем не видимым
+     background-color: rgba(219,127,8, 0.7); /*задаём цвет - появл при hover*/
+     transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+     transform: translateY(-100px); // заголовок состояние покоя находится вверху
+     opacity: 0; // невидимые в состоянии покоя
+     transition: all 0.2s ease-in-out;
+}
+
+.view-first p {
+     transform: translateY(100px); // параграф состояние покоя находится внизу
+     opacity: 0; // невидимые в состоянии покоя
+     transition: all 0.2s linear;
+}
+.view-first a.info{
+     opacity: 0; // невидимые в состоянии покоя
+     transition: all 0.2s ease-in-out;
+}
+
+/*hover эффекты*/
+.view-first:hover img {
+     transform: scale(1.1); // увеличение фото при hover
+}
+
+.view-first:hover .mask {
+     opacity: 1; 
+}
+
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+     opacity: 1;
+     transform: translateY(0px);
+}
+
+.view-first:hover p {
+     transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+     transition-delay: 0.2s;
+}

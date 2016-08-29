@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>FW</title>
+  </head>
+  
+  <div class="wrapper">
+           <h3 class="title">Accordion</h3>
+            <ul class="left-nav">
+                <li class="left-nav__item">
+                    <a class="left-nav__link" href="#">Ссылка 1</a>
+                    <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
+                        <ul>
+                            <li class="left__subitem">
+                                <a class="left__sublink" href="#">Текстовое описание</a>
+                                <ul>
+                                    <li>Доп список</li>
+                                    <li>Доп список</li>
+                                </ul>
+                            </li>
+                            <li>Текстовое описание</li>
+                            <li>Текстовое описание</li>
+                        </ul>
+                    </article>
+
+                </li>
+                <li class="left-nav__item">
+                    <a class="left-nav__link" href="#">Ссылка 2</a>
+                    <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
+                        <ul>
+                            <li class="left__subitem">
+                                <a class="left__sublink" href="#">Текстовое описание</a>
+                                <ul>
+                                    <li>Доп список</li>
+                                    <li>Доп список</li>
+                                </ul>
+                            </li>
+                            <li>Текстовое описание</li>
+                            <li>Текстовое описание</li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="left-nav__item">
+                    <a class="left-nav__link" href="#">Ссылка 3</a>
+                    <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
+                        <ul>
+                            <li class="left__subitem">
+                                <a class="left__sublink" href="#">Текстовое описание</a>
+                                <ul>
+                                    <li>Доп список</li>
+                                    <li>Доп список</li>
+                                </ul>
+                            </li>
+                            <li>Текстовое описание</li>
+                            <li>Текстовое описание</li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+            <hr>
+        </div>
+        
+        <!--TABs-->
+       
+       <div class="wrapper">
+           <h3 class="title">Tabs</h3>
+            <input type="radio" name="tab" id="tab-1" checked>
+            <label for="tab-1">tab-1</label>
+            <input type="radio" name="tab" id="tab-2">
+            <label for="tab-2">tab-2</label>
+            <input type="radio" name="tab" id="tab-3">
+            <label for="tab-3">tab-3</label>
+
+            <div class="content">
+                <article class="tab-1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    <h2>Title</h2>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure</p>
+                </article>
+                <article class="tab-2">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure</article>
+                <article class="tab-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</article>
+            </div>
+            <hr>
+        </div>
+        
+        <!--Ховеры на блоках-->
+        <div class="wrapper">
+        <h3 class="title title--mt">Mask hovers</h3>
+        
+        <div class="item-block view-first">
+            <img src="img/city-small.jpg" alt="city">
+            <div class="mask">
+                <h2>Название</h2>
+                <p>Структура разметки очень простая и интуитивно понятная. Создайте контейнер, который будет содержать изображение</p>
+                <a href="#" class="info">Посмотреть</a>
+            </div>
+        </div>
+        
+        </div>
+        
+        
+  <script src="js/script.js"></script>
+  <body>
+  </body>
+</html>

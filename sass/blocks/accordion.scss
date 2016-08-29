@@ -1,0 +1,25 @@
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+a.left-nav__link {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: lightgreen;
+}
+
+.left__descr {
+    padding: 10px;
+    font-size: 14px;
+    background: lightyellow;
+    border: 1px solid gray;
+}
+
+li {
+  list-style: none;
+}
