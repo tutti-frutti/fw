@@ -1,0 +1,59 @@
+.active-menu-ic {
+    display: inline-block;
+}
+
+button {
+    display: inline-block;
+    width: 35px; // размеры задаем, чтобы правильно работал cursor: pointer;
+    height: 35px; // размеры задаем, чтобы правильно работал cursor: pointer;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+span {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 5px;
+    background: #023b98;
+    &.active {
+        background: transparent; // если задавать opacity, то исчезают спан и связанные с ним псевдоэлементы. прозрачный фон работает так как у span и его псевдоэлементов он разный 
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: 0;
+        width: 35px;
+        height: 5px;
+        background: #023b98;
+        transition: 0.4s;
+    }
+    &.active::before {
+            transform: rotate(-45deg) translate(-7px, 6px);
+            background: #bb001a;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 0;
+        width: 35px;
+        height: 5px;
+        background: #023b98;
+        transition: 0.4s;
+    }
+    &.active::after {
+            transform: rotate(45deg) translate(-8px, -8px);
+            background: #bb001a;
+    }
+  }
+}
+
+// - 1 span в button
+// - верхняя и нижняя полоска сделанны через ::before и ::after тега span
+// - трансформация работает с помощью jQuery, через добавление класса "active"
+// - "active" добавляем для span, ::before и ::after
+// - "active" для span меняет прозрачность фона - transparent, а не opacity

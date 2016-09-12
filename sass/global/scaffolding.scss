@@ -1,8 +1,9 @@
 body {
-    background: url('../img/brick_5.jpg') 0 0 no-repeat;
+//    background: url('../img/brick_5.jpg') 0 0 no-repeat;
+    background: #e1e1e1;
 }
 
-.wrapper {
+.center {
 	max-width: 500px;
 }
 
@@ -23,6 +24,6 @@ a {
 	padding: 15px;
     text-align: center;
     &--mt {
-        margin-top: 330px;
+//        margin-top: 330px;
     }
 }

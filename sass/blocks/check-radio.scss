@@ -1,0 +1,121 @@
+// checkboxes
+
+.checkboxes,
+.radio {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.wrap-check {
+    width: 130px;
+    margin: 10px 0;
+
+	label { // привязка к обертке > .wrap-check
+        position: relative;
+        padding: 0;
+        margin: 0;
+        color: #333333;
+        background: transparent; // доп указывается, если есть другие эл, в которых используется label
+    }
+    input {
+        display: none;
+    }
+    
+    // стили для кнопки в состоянии покоя
+    label::before {
+        display: inline-block;
+        margin-right: 20px;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border: 1px solid #023b98;
+        vertical-align: middle;
+    }
+    input:checked + label:before {
+        background: #4f7ec9;
+        border: 1px solid #4f7ec9;
+    }
+    
+    // стили для активного чекбокса + галочка
+    input:checked + label::after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        left: 4px;
+        top: 6px;
+        width: 11px;
+        height: 8px;
+        vertical-align: middle;
+        background: url("../img/check-ic.png") 0 0 no-repeat;
+    }
+    
+    input.focus + label::before {
+        background: #4f7ec9;
+        border: 1px solid #4f7ec9;
+    }
+    
+    input:disabled + label::before {
+        cursor: not-allowed;
+        background: #c3c5cd;
+    }
+}
+
+//radiobutton
+
+.wrap-radio {
+    width: 110px;
+    margin: 10px 0;
+    label {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        color: #333333;
+        background: transparent; // доп указывается, если есть другие эл, в которых используется label
+    } 
+    input {
+        display: none;
+    }
+    
+    // стили для кнопки не выбранной
+    label::before { 
+        display: inline-block;
+        margin-right: 20px;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border: 1px solid #023b98;
+        vertical-align: middle;
+        border-radius: 50%;
+    }
+    input:checked + label:before {
+        border: 1px solid #4f7ec9;
+        background: #4f7ec9;
+    }
+    // стиль для активной кнопки - для указателя внутри
+    input:checked + label::after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        left: 5px;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    
+    // стили для состояния кнопок
+    input.focus + label::before {
+        background: #4f7ec9;
+        border: 1px solid #4f7ec9;
+    }
+    
+    input:disabled + label::before {
+        cursor: not-allowed;
+        background: #c3c5cd;
+    }
+}

@@ -15,7 +15,7 @@ input[id="tab-3"]:checked ~ .content .tab-3 {
 }
 
 input:checked + label {
-        background: #c8e124;
+//        background: #c8e124;
     }
 
 label {
@@ -33,7 +33,6 @@ label {
 
 .content > article {
     display: none;
-	position: absolute;
     padding: 50px;
     border-top: 5px solid #c8e124;
     top: 0;
