@@ -18,6 +18,11 @@ $(document).ready(function() {
     $('.left-nav__item>.left__subitem').hide();
     
   });
+    
+    function myFunction(x) {
+    x.classList.toggle("change");
+};
+    
 });
 
 
