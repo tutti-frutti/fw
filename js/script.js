@@ -19,9 +19,20 @@ $(document).ready(function() {
     
   });
     
-    function myFunction(x) {
-    x.classList.toggle("change");
-};
+    // скрипт для анимирования кнопки
+    // используется .toggleClass для добавить/убрать класс "active"
+    $("button").click(function(event){
+        event.preventDefault();
+        $("span").toggleClass("active");
+    })
+    
+    // скрипт для моб меню
+    // добавляем/убираем класс "show", которому в css прописанны параметры для меню 
+    $(".menu-open").click(function(event){
+        event.preventDefault;
+        $(".menu__list").toggleClass("show");
+        
+    });
     
 });
 

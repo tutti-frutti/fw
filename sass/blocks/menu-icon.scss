@@ -1,71 +1,61 @@
-.static,
-.ic-span,
-.animate {
+.active-menu-ic {
     display: inline-block;
-    margin-right: 20px;
-    cursor: pointer;
-    vertical-align: top;
 }
 
-// simple icon width div's
-.icon {
-    width: 35px;
-    height: 5px;
-    background: gray;
-    margin: 5px 0;
-}
-
-
-// simple icon width span
-.ic-menu {
+button {
+    display: inline-block;
+    width: 35px; // размеры задаем, чтобы правильно работал cursor: pointer;
+    height: 35px; // размеры задаем, чтобы правильно работал cursor: pointer;
     position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+span {
+    position: absolute;
     display: block;
     width: 35px;
     height: 5px;
-    background: blue;
-    &:hover {
-        opacity: .5;
+    background: #023b98;
+    &.active {
+        background: transparent; // если задавать opacity, то исчезают спан и связанные с ним псевдоэлементы. прозрачный фон работает так как у span и его псевдоэлементов он разный 
     }
-}
-
-.ic-menu {
-    &::before {
+    &::before { // псевдоэлемент верхней полоски
         position: absolute;
         content: '';
         top: -10px;
         left: 0;
         width: 35px;
         height: 5px;
-        background: blue;
+        background: #023b98;
+        transition: 0.4s;
     }
-    &::after {
+    &.active::before { // трансформация псевдоэлемента
+            transform: rotate(-45deg) translate(-7px, 6px);
+            background: #bb001a;
+    }
+    &::after {  // псевдоэлемент нижней полоски
         position: absolute;
         content: '';
         top: 10px;
         left: 0;
         width: 35px;
         height: 5px;
-        background: blue;
+        background: #023b98;
+        transition: 0.4s;
     }
 }
+    }
+    &.active::after { // трансформация псевдоэлемента
+            transform: rotate(45deg) translate(-8px, -8px);
+            background: #bb001a;
+    }
+  
 
-//animate icon with div's
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
 
-.change .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
-}
+// - 1 span в button
+// - верхняя и нижняя полоска сделанны через ::before и ::after тега span
+// - трансформация работает с помощью jQuery, через добавление класса "active"
+// - "active" добавляем для span, ::before и ::after
+// - "active" для span меняет прозрачность фона - transparent, а не opacity
