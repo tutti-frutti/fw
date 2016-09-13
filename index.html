@@ -11,57 +11,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <title>FW</title>
 </head>
+<body>
 
+<main>
 <div class="center">
+   
+   <!--Menu Top Fixed--------------------------------------------------------------------------------->
+   
+   <div class="menu-top-fixed">
+       <nav class="nav-fixed sidenav">
+          <button class="menu-open"><span></span></button>
+           <ul class="nav-fixed__list">
+               <li class="nav-fixed__item"><a href="#">item-1</a></li>
+               <li class="nav-fixed__item"><a href="#">item-2</a></li>
+               <li class="nav-fixed__item"><a href="#">item-3</a></li>
+               <li class="nav-fixed__item"><a href="#">item-4</a></li>
+               <li class="nav-fixed__item"><a href="#">item-5</a></li>
+           </ul>
+       </nav>
+   </div>
+   
+   <!--Accordion-------------------------------------------------------------------------------------->
     <h3 class="title">Accordion</h3>
-    <ul class="left-nav">
-        <li class="left-nav__item">
-            <a class="left-nav__link" href="#">Ссылка 1</a>
-            <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
-                <ul>
-                    <li class="left__subitem">
-                        <a class="left__sublink" href="#">Текстовое описание</a>
-                        <ul>
-                            <li>Доп список</li>
-                            <li>Доп список</li>
-                        </ul>
-                    </li>
-                    <li>Текстовое описание</li>
-                    <li>Текстовое описание</li>
-                </ul>
+    <ul class="accordion">
+        <li class="accordion-tab">
+            <a class="accordion-link" href="#">Ссылка 1</a>
+            <article class="accordion-descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
             </article>
 
         </li>
-        <li class="left-nav__item">
-            <a class="left-nav__link" href="#">Ссылка 2</a>
-            <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
-                <ul>
-                    <li class="left__subitem">
-                        <a class="left__sublink" href="#">Текстовое описание</a>
-                        <ul>
-                            <li>Доп список</li>
-                            <li>Доп список</li>
-                        </ul>
-                    </li>
-                    <li>Текстовое описание</li>
-                    <li>Текстовое описание</li>
-                </ul>
+        <li class="accordion-tab">
+            <a class="accordion-link" href="#">Ссылка 2</a>
+            <article class="accordion-descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
             </article>
         </li>
-        <li class="left-nav__item">
-            <a class="left-nav__link" href="#">Ссылка 3</a>
-            <article class="left__descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
-                <ul>
-                    <li class="left__subitem">
-                        <a class="left__sublink" href="#">Текстовое описание</a>
-                        <ul>
-                            <li>Доп список</li>
-                            <li>Доп список</li>
-                        </ul>
-                    </li>
-                    <li>Текстовое описание</li>
-                    <li>Текстовое описание</li>
-                </ul>
+        <li class="accordion-tab">
+            <a class="accordion-link" href="#">Ссылка 3</a>
+            <article class="accordion-descr">Первой строчкой мы добавляем класс «active» первому элементу внутри (класс«active» отвечает за позиционирования фонового рисунка — иконки со стрелочкой). Во второй строчке мы прячем все не первые элементы внутри.
             </article>
         </li>
     </ul>
@@ -108,90 +94,90 @@
             <a href="#" class="info">Посмотреть</a>
         </div>
     </div>
-<hr>
+    <hr>
 </div>
 
 <!--Menu icon-->
 
 <div class="center">
     <h3 class="title">Menu icon</h3>
-    
+
     <div class="static">
         <div class="icon"></div>
         <div class="icon"></div>
         <div class="icon"></div>
-        </div>
-        
-        <div class="ic-span">
+    </div>
+
+    <div class="ic-span">
         <span class="ic-menu"></span>
-        </div>
-        
+    </div>
+
     <div class="animate" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
-    
+
 </div>
-    <hr>
+<hr>
 
-    <!--checkbox and radio-->
-        
-        <div class="center">
+<!--checkbox and radio-->
 
-        <div class="checkboxes">
+<div class="center">
+
+    <div class="checkboxes">
 
         <div class="wrap-check">
             <input type="checkbox" id="act-1" checked>
             <label for="act-1"></label>
         </div>
-        
+
         <div class="wrap-check">
             <input type="checkbox" id="act-2">
             <label for="act-2"></label>
         </div>
-        
+
         <div class="wrap-check">
             <input type="checkbox" id="act-3">
             <label for="act-3"></label>
         </div>
-        
-        </div>
 
-       <div class="radio">
+    </div>
+
+    <div class="radio">
         <div class="wrap-radio">
             <input type="radio" name="test" id="rs-1" checked>
             <label for="rs-1"></label>
         </div>
-        
+
         <div class="wrap-radio">
             <input type="radio" name="test" id="rs-2">
             <label for="rs-2"></label>
         </div>
-        
+
         <div class="wrap-radio">
             <input type="radio" name="test" id="rs-3">
             <label for="rs-3"></label>
         </div>
-        
-        </div>
 
-    <!--menu icon animate-->
-       
-       <div class="active-menu-ic">
-           <button><span></span></button>
-       </div>
-       <hr>
-       
-    <!--menu slide from left-->
-    
+    </div>
+
+    <!--menu icon animate----------------------------------------------------------------------->
+
+    <div class="active-menu-ic">
+        <button><span></span></button>
+    </div>
+    <hr>
+
+    <!--menu slide from left-------------------------------------------------------------------->
+
     <div class="menu">
-       <div class="button">
-           <button class="menu-open"><span></span></button>
-       </div>
+        <div class="button">
+            <button class="menu-open"><span></span></button>
+        </div>
         <!--Список будет выезжать над контентом-->
         <ul class="menu__list">
-            <li class="menu__items"><a href="">Link1</a></li>
+            <li class="menu__items"><a href="menu-page.html">Link1</a></li>
             <li class="menu__items"><a href="">Link2</a></li>
             <li class="menu__items"><a href="">Link3</a></li>
             <li class="menu__items"><a href="">Link4</a></li>
@@ -204,12 +190,18 @@
         </div>
     </div>
 
-</div> <!--Center end-->
+    <!--Анимированная строка поиска-------------------------------------------------------------->
+
+    <div class="search">
+        <input type="text" name="search" id="search-input" placeholder="Поиск..">
+    </div>
+
+</div>
+<!--Center end-->
 
 
 <script src="js/script.js"></script>
-
-<body>
+</main>
 </body>
 
 </html>

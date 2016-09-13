@@ -1,0 +1,21 @@
+.search {
+    & input {
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        width: 100px;
+        height: 40px;
+        border: 1px solid #03378b;
+        border-radius: 5px;
+        color: darkslategray;
+        transition: 1.5s;
+        overflow: scroll;
+        background: #fff url("../img/search-icon.png") 3px 8px no-repeat;
+        &:focus {
+            width: 100%;
+            border: 1px solid #7baeff;
+            outline: none;
+        }
+    }
+}

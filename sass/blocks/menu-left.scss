@@ -2,16 +2,16 @@
     position: relative;
     max-width: 500px;
     height: 250px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
     &__list {
         @media #{$mobile} { // стили для навигации в mobile варианте
-            position: absolute;
+            position: absolute; // меню появляется слева и сверху над контентом
             width: 300px;
             top: 50px;
             left: -300px;
             transition: ease 0.5s;
-            background: #000;
+            background: #4f7ec9;
     }
 }    
     &__items {
@@ -26,6 +26,7 @@
         @media #{$mobile} { // стили для навигации в mobile варианте
             display: block;
             margin: 10px 5px;
+            text-align: center;
         }
     }
 }
