@@ -31,15 +31,25 @@ $(document).ready(function() {
     
     
     // скрипт для меню, которое выезжает слева ================================
+//    $(".menu-open").click(function(event){
+//        event.preventDefault;
+//        $(".sidenav").css("width", "100%");
+//    });
+//    $(".menu-close").click(function(event){
+//        event.preventDefault;
+//            $(".sidenav").css("width", "0");
+//    });
+    // скрипт для меню, которое выезжает слева ================================
+    
     $(".menu-open").click(function(event){
         event.preventDefault;
-        $(".sidenav").css("width", "320px");
+        $(".sidenav").toggleClass("active");
     });
-    $(".menu-close").click(function(event){
-        event.preventDefault;
-            $(".sidenav").css("width", "0");
-    });
-    // скрипт для меню, которое выезжает слева ================================
+//    $(".menu-close").click(function(event){
+//        event.preventDefault;
+//        $(".sidenav").removeClass("active");
+//    });
+    
 });
 
 

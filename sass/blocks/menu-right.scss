@@ -7,16 +7,16 @@
     background: #bfd8ff;
     text-align: center;
     @media #{$mobile} { // стили для мобильного меню
-        position: fixed;
-        margin: 0;
+        position: absolute;
+        margin-top: 60px;
+        right: -2000px; // координаты для правильного позиционирования 
         top: 0; // координаты для правильного позиционирования 
-        left: 0; // координаты для правильного позиционирования 
-        width: 0; // основной момент --- ширина 0
-        height: 100%;
+        width: 100%; // основной момент --- ширина 0
+        height: 450px;
         overflow-x: hidden;
         z-index: 1; // меню над текстом
         background: #111;
-//        transition: 0.5s;
+        transition: .5s;
     }
     & .menu-close {
         position: absolute;
@@ -34,11 +34,12 @@
         }
     }
 }
+.active {
+    right: 0;
+    margin-top: 60px;
+}
 // стиль для списка навигации ---------------------------------------
 .nav {
-    @media #{$desktop} {
-//        width: 100% !important;
-    }
     &__list {
         margin-top: 50px;
     }

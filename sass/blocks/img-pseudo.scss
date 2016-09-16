@@ -1,0 +1,43 @@
+.images {
+    text-align: center;
+    &__list {
+        
+    }
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin-left: -4px;
+        margin-top: -4px;
+        transition: .3s;
+        &::before {
+            position: absolute;
+            content: '';
+            margin-left: -15px;
+            top: 75px;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            opacity: 0;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            margin-left: -15px;
+            top: 75px;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        &:hover {
+         background: #000;
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
