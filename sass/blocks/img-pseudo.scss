@@ -33,11 +33,28 @@
             opacity: 0;
         }
         &:hover {
-         background: #000;
-            &::before,
+            &::before
             &::after {
                 opacity: 1;
             }
         }
     }
+    a {
+        position: relative;
+        display: block;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #000;
+            z-index: 1;
+            opacity: 0;
+        }
+    }
+        &:hover {
+                opacity: .3;
+            }
 }
