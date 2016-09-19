@@ -1,0 +1,56 @@
+.navigation {
+    position: relative;
+    z-index: 1;
+    height: 60px;
+    background: #4b4b4b;
+    &__list {
+        display: inline-block;
+        width: 84%;
+        vertical-align: top;
+    }
+    &__item {
+        display: inline-block;
+        a {
+            display: block;
+            padding: 0 10px;
+            font-size: 16px;
+            margin: 0 5px;
+            line-height: 60px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+    &__toggles {
+        display: inline-block;
+        width: 15%;
+        & .icon-open {
+            background: #932439 url("../img/search-icon-png-2.png") center center no-repeat;
+            transition: .3s;
+        }
+        & .icon-close {
+            background: #ddd url("../img/circle-close-128.png") center center no-repeat;
+            transition: .3s;
+        }
+    }
+}
+
+.search-icon {
+    float: right;
+    width: 60px;
+    height: 60px;
+    vertical-align: top;
+    background: #932439;
+}
+
+.lang {
+    float: right;
+    padding-top: 21px;
+    width: 60px;
+    height: 60px;
+    vertical-align: top;
+    text-align: center;
+    background: #2d2d2d;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}

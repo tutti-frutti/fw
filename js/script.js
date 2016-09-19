@@ -50,6 +50,24 @@ $(document).ready(function() {
 //        $(".sidenav").removeClass("active");
 //    });
     
+    // ============================================================
+    
+    $(".search-icon").click(function(event){
+        event.preventDefault;
+        $(".site-search").toggleClass("open"); // открывает блок с формой
+        if($(".search-icon").hasClass("icon-open")) { // < условие!
+            $(".search-icon").removeClass("icon-open");
+            $(".search-icon").addClass("icon-close");
+        }
+        else {
+            $(".search-icon").removeClass("icon-close");
+            $(".search-icon").addClass("icon-open");
+        }
+        
+        // оба выражения смотрят на условие. тут, по логике кода обязательно есть какой-то один класс из двух. или icon-open или icon-close. с верхним выражением понятно --- если имеем класс icon-open, то убираем его и добавляем icon-close. во втором случае подразумевается, что, если не стоит класс icon-open --- значит стоит класс icon-close, а значит мы его убираем и добавляем icon-open.
+       // ============================================================ 
+    });
+    
 });
 
 
