@@ -1,12 +1,9 @@
 .site-search {
     display: none;
-//    visibility: hidden;
-//    transform: translateY(-100px);
     height: 55px;
     line-height: 55px;
     background: #909090;
     border-bottom: 1px solid gray;
-    transition: all 0.3s;
     &__inputs-wrapper {
         display: inline-block;
         width: 60%;
@@ -32,11 +29,4 @@
     &__btn {
         display: none;
     }
-}
-
-.open {
-    display: block;
-//    transform: translateY(0);
-//    visibility: visible;
-    transition: all 0.3s;
 }
