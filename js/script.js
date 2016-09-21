@@ -80,6 +80,26 @@ $(document).ready(function() {
   });
     // ============================================================
     
+    $('#slideshow').desoSlide({
+    thumbs: $('ul.slideshow_thumbs li > a'),
+    effect: {
+//        provider: null,
+//        name: 'none'
+        effect: 'none' // ???
+        
+    },
+    overlay: 'none', // убирает полосу снизу на большом избр 
+    controls: {
+//        show: 'false', // убирает контроллеры
+//        keys: 'false', // убирает контроллеры
+    },
+    auto: {
+        load: 'true',
+        start: 'true',
+    }
+    
+});
+    
 });
 
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/slick-slider/slick/slick.css">
     <link rel="stylesheet" href="js/slick-slider/slick/slick-theme.css">
+    <link rel="stylesheet" href="js/desoslide/dist/css/jquery.desoslide.min.css">
+    <link rel="stylesheet" href="js/desoslide/dist/css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <title>FW</title>
@@ -124,7 +126,31 @@ div > div> h4 + p --- content . стандартная структура для
 для div с избр используется style="background-image: url()" --- это позволяет вручную установить высоту контейнера для избр, что страхует от разрыва, если фотография будет больше, чем размер контейнера. стили для background-image прописываются отдельно в css. также, если внутри div с избр есть контентный блок, то в этом случае этот блок не будет искажаться и не будет искажаться фотография при уменьшении экрана.
 -->
 
+<div class="center">
+    <div class="slideshow-wrapper">
+       <div class="slideshow-list">
+        <ul class="slideshow_thumbs">
+            <li><a href="img/goods/mount-1.jpg" data-desoslide-index="0">
+                <img src="img/goods/thumb-mount-1.jpg" alt="mount">
+            </a></li>
+            <li><a href="img/goods/mount-2.jpg" data-desoslide-index="1">
+                <img src="img/goods/thumb-mount-2.jpg" alt="mount">
+            </a></li>
+            <li><a href="img/goods/mount-3.jpg" data-desoslide-index="2">
+                <img src="img/goods/thumb-mount-3.jpg" alt="mount">
+            </a></li>
+        </ul>
+        </div>
+        <div id="slideshow">
+            <div class="desoslide-wrapper">
+                <img src="img/goods/mount-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="js/slick-slider/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/desoslide/dist/js/jquery.desoslide.min.js"></script>
 <script src="js/script.js"></script>
 
 
