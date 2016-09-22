@@ -24,8 +24,17 @@
             text-transform: uppercase;
         }
         p {
+            width: 250px;
             padding: 0 15px;
             font-size: 14px;
+            overflow: hidden;
+//            text-overflow: ellipsis;
+//            white-space: pre-wrap;
         }
+    }
+    &__wrapper {
+        width: 250px;
+        column-width: 250px;
+        height: 100%;
     }
 }

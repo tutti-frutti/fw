@@ -75,7 +75,7 @@ $(document).ready(function() {
     $('.slider-content').slick({
         dots: true,
         pauseOnHover: true, // пауза прокрутки при наведении курсора
-        autoplay: true,
+//        autoplay: true,
         vertical: true,
   });
     // ============================================================
@@ -83,22 +83,32 @@ $(document).ready(function() {
     $('#slideshow').desoSlide({
     thumbs: $('ul.slideshow_thumbs li > a'),
     effect: {
-//        provider: null,
-//        name: 'none'
-        effect: 'none' // ???
-        
+        provider: null, // название типа анимации
+        name: 'none', // тип эффекта анимации
     },
-    overlay: 'none', // убирает полосу снизу на большом избр 
+    overlay: 'hover', // убирает полосу снизу на большом избр 
     controls: {
-//        show: 'false', // убирает контроллеры
-//        keys: 'false', // убирает контроллеры
+        show: true, // убирает контроллеры
+        keys: true, // управление с клавиатуры
     },
     auto: {
-        load: 'true',
-        start: 'true',
+        load: true, // предзагрузка фотографий
+        start: true, // автостарт слайдшоу
     }
-    
 });
+    // ============================================================
+    // bx-slider
+    $('.bxslider').bxSlider({
+        mode: 'vertical',
+        adaptiveHeight: false,
+        responsive: false,
+        pagerCustom: '#bx-pager', // для отображения thumb
+        pagerType: 'full', // при 'short' меняет на цифры
+        pagerSelector: 'jQuery selector',
+        controls: true, // убирает/добавляет стрелки на слайдер
+        autoControls: true,
+    });
+    // ============================================================
     
 });
 
