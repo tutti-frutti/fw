@@ -1,0 +1,36 @@
+.bg-attach {
+//    height: 100vh;
+//    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../img/city-big.jpg") 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+//    overflow: auto;
+    &__top {
+        height: 300px;
+        width: 100%;
+        background: #b2b2b2;
+        text-align: center;
+        }
+    &__block-1 {
+        width: 90%;
+        height: 250px;
+        margin-right: 25px;
+        padding: 10px;
+        text-align: center;
+        &_red {
+            position: relative;
+            background: red;
+            z-index: 1;
+        }
+    }
+    &__medium {
+        height: 350px;
+        background: transparent;
+    }
+    &__bottom {
+//        height: 100%;
+        background: #605b86;
+    }
+}

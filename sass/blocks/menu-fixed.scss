@@ -1,36 +1,16 @@
 .nav-fixed {
     position: fixed;
-    max-width: 500px;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    line-height: 50px;
+    top: 5%;
+    right: 5%;
     text-align: left;
-    overflow: hidden;
-    background: #002560;
     z-index: 1;
-    @media #{$mobile} {
-        position: static;
-        min-height: 50px;
-    }
-    
-    &__item {
-        display: inline-block;
-        margin: 0 1%;
-        @media #{$mobile} {
-        display: none;
-    }
-        & a {
-            display: block;
-            padding: 0px 10px;
-            color: #fff;
+    li {
+        margin-bottom: 10px;
+        a {
+            color: #32287c;
+            &:hover {
+                text-decoration: underline;
+            }
         }
-    }
-}
-
-.fixed-open {
-    display: none;
-    @media #{$mobile} {
-        display: block;
     }
 }

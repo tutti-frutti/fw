@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="js/desoslide/dist/css/jquery.desoslide.min.css">
+    <link rel="stylesheet" href="js/desoslide/dist/css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <title>FW</title>
+</head>
+<body>
+<!--Блок навигации -------------------------------------------------------------------------->
+<div class="navigation">
+    <div class="center navigation__wrapper">
+    <ul class="navigation__list">
+        <li class="navigation__item"><a href="#">About</a></li>
+        <li class="navigation__item"><a href="#">Academics</a></li>
+        <li class="navigation__item"><a href="#">Admissions</a></li>
+        <li class="navigation__item"><a href="#">Campus Life</a></li>
+        <li class="navigation__item"><a href="#">Research</a></li>
+        <li class="navigation__item"><a href="#">International</a></li>
+    </ul>
+<!--Блок навигации -------------------------------------------------------------------------->
+<!--Язык и поиск ---------------------------------------------------------------------------->
+    <div class="navigation__toggles">
+    <a href="#" class="search-icon icon-open"></a>
+    <a href="#" class="lang">fr</a>
+<!--Язык и поиск ---------------------------------------------------------------------------->
+    </div>
+    
+    </div> <!--Center end-->
+</div>
+
+<!--Блок поиска ---------------------------------------------------------------------------->
+<div class="site-search">
+    <div class="center">
+<!--Форма ---------------------------------------------------------------------------------->
+        <form id="site-search" action="" method="get">
+<!--wrapper для inputs --------------------------------------------------------------------->
+           <div class="site-search__inputs-wrapper">
+            <input type="hidden" name="">
+            <input type="text" name="q" class="site-search__input">
+            </div>
+<!--wrapper для inputs --------------------------------------------------------------------->
+<!--блок с радиокнопками ------------------------------------------------------------------->
+            <div class="site-search__control">
+                <div class="wrap-radio">
+                    <input type="radio" name="test" id="rs-1" checked>
+                    <label for="rs-1"></label>
+                </div>
+                <div class="wrap-radio">
+                    <input type="radio" name="test" id="rs-2">
+                    <label for="rs-2"></label>
+                </div>
+            </div>
+<!--блок с радиокнопками ------------------------------------------------------------------->
+            <button type="submit" class="btn site-search__btn"></button>
+        </form>
+    </div>
+</div>
+
+<div class="div"><style=""></style></div>
+
+<div class="center"><p class="site-search__text">это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в теге</p></div>
+
+<!--
+Структура:
+1. div - Блок навигации
+    2. div - блок с формой поиска и радиокнопками
+        3. форма внутри блока = тег form
+        = input [type="hidden"] - скрытое поле, используется если нужно "положить" данные
+        = input [type="text"] - основное поле формы
+        = радиокнопки
+        = button submit - скрыт по умолчанию
+для стилизации используем css, для плавного "выезда" используем скрипт, в котором основным методом является slideToggle --- это обеспечивает плавное переключение состояний.
+
+для смены иконок используем скрипт в котором используем методы .hasClass, .removeClass, .addClass, которые расположены внутри условий if / else
+-->
+
+<!--Слайдер ------------------------------------------------------------------->
+
+<div class="center">
+    <div class="slider-content">
+        <div style="background-image: url(img/sea/sea-large.jpg)" class="slider-content__img">
+            <div class="slider-content__caption">
+                <h4>Название</h4>
+                <p>это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя.</p>
+            </div>
+        </div>
+        
+        <div style="background-image: url(img/sea/sea-large2.jpg)" class="slider-content__img">
+            <div class="slider-content__caption">
+                <h4>Название</h4>
+<!--                <div class="slider-content__wrapper">-->
+                <p>это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя.</p>
+                
+                <p> это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя.</p>
+<!--                </div>-->
+            </div>
+        </div>
+        
+        <div style="background-image: url(img/sea/sea-large4.jpg)" class="slider-content__img">
+            <div class="slider-content__caption">
+                <h4>Название</h4>
+                <p>это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.</p>
+            </div>
+        </div>
+        
+        <div style="background-image: url(img/sea/sea-large5.jpg)" class="slider-content__img">
+            <div class="slider-content__caption  slider-content__caption--right">
+                <h4>Название</h4>
+                <p>это скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя. а потом получить их в обработчик с остальными полями формы, получить можно через $_POST или $_GET в зависимости от того что вы указали в тегеэто скрытые поля, в которые можно подставить данные при помощи php или js незаметно для пользователя.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Слайдер ------------------------------------------------------------------->
+
+<!--
+Структура:
+div > div> h4 + p --- content . стандартная структура для плагина slick slider. div - внутри которого избр. далее внутри этого дива еще один в котором находиться контент - заголовок и параграф.
+
+для div с избр используется style="background-image: url()" --- это позволяет вручную установить высоту контейнера для избр, что страхует от разрыва, если фотография будет больше, чем размер контейнера. стили для background-image прописываются отдельно в css. также, если внутри div с избр есть контентный блок, то в этом случае этот блок не будет искажаться и не будет искажаться фотография при уменьшении экрана.
+-->
+
+<!--Верт слайдер ------------------------------------------------------------------->
+<!--
+<div class="center">
+    <div class="slideshow-wrapper">
+       <div class="slideshow-list">
+        <ul class="slideshow_thumbs">
+            <li><a href="img/goods/mount-1.jpg" data-desoslide-index="0">
+                <img src="img/goods/thumb-mount-1.jpg" alt="mount">
+            </a></li>
+            <li><a href="img/goods/mount-2.jpg" data-desoslide-index="1">
+                <img src="img/goods/thumb-mount-2.jpg" alt="mount">
+            </a></li>
+            <li><a href="img/goods/mount-3.jpg" data-desoslide-index="2">
+                <img src="img/goods/thumb-mount-3.jpg" alt="mount">
+            </a></li>
+        </ul>
+        </div>
+        <div id="slideshow">
+            <div class="desoslide-wrapper">
+                <img src="img/goods/mount-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!--bxslider ------------------------------------------------------------------->
+<div class="bxslider-general  bxslider-general--indent">
+   <div class="center">
+   <h3>Bxslider</h3>
+   <div class="bxslider-general__thumb">
+        <div id="bx-pager">
+            <a data-slide-index="0" href=""><img src="img/space/thumb/thumb-space-1.JPG" alt="space"></a>
+            <a data-slide-index="1" href=""><img src="img/space/thumb/thumb-space-2.JPG" alt="space"></a>
+            <a data-slide-index="2" href=""><img src="img/space/thumb/thumb-space-3.JPG" alt="space"></a>
+            <a data-slide-index="3" href=""><img src="img/space/thumb/thumb-space-4.JPG" alt="space"></a>
+        </div>
+    </div>
+    <div class="bxslider-general__wrapper">
+        <ul class="bxslider">
+            <li style="background-image: url(img/space/space-1.jpg)" class="bxslider-general__img"></li>
+            <li style="background-image: url(img/space/space-2.jpg)" class="bxslider-general__img"></li>
+            <li style="background-image: url(img/space/space-3.jpg)" class="bxslider-general__img"></li>
+            <li style="background-image: url(img/space/space-huge.jpg)" class="bxslider-general__img"></li>
+        </ul>
+    </div>
+    
+  </div>
+</div>
+<!--bxslider ------------------------------------------------------------------->
+
+
+
+<script type="text/javascript" src="js/slick-slider/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/desoslide/dist/js/jquery.desoslide.min.js"></script>
+<script type="text/javascript" src="js/bxslider/jquery.bxslider.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
