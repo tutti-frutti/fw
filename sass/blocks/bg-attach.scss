@@ -16,12 +16,13 @@
     &__block-1 {
         width: 90%;
         height: 250px;
-        margin-right: 25px;
         padding: 10px;
+        margin: 0 auto;
         text-align: center;
         &_red {
             position: relative;
             background: red;
+            color: red;
             z-index: 1;
         }
     }
