@@ -11,6 +11,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bake');
+    grunt.loadNpmTasks('grunt-spritesmith');
 
     grunt.initConfig({
         sass: {
@@ -155,7 +156,15 @@ module.exports = function (grunt) {
                     'index1.html': 'app/base.html',
                 }
             }
-        }
+        },
+        sprite:{
+      all: {
+        src: 'img/sprites/*.png',
+        dest: 'img/sprites/spritesheet.png',
+        destCss: 'css/sprites.css',
+        padding: 20
+      }
+    }
 
     });
 
