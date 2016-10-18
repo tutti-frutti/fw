@@ -32,3 +32,17 @@ a {
 //        margin-top: 330px;
     }
 }
+
+.icon-arr-down {
+  background-image: url(../img/sprites/arrows.png);
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 6px;
+}
+.icon-arr-up {
+  background-image: url(../img/sprites/arrows.png);
+  background-position: 0px -26px;
+  width: 10px;
+  height: 6px;
+}

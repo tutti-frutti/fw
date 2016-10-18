@@ -1,17 +1,21 @@
 .select {
     &__box {
         display: inline-block;
+        width: 170px;
         vertical-align: top;
     }
     &__choice {
-//        .icon-arr-down {
-//        background-image: url(../img/sprites/spritesheet.png);
-//        background-position: -10px 0px;
-//        background-repeat: no-repeat;
-//        width: 9px;
-//        height: 6px;
-//            
-//        }
+        display: block;
+        cursor: pointer;
+        background-image: url(../img/sprites/arrows.png);
+        background-position: 100% 5px;
+        background-repeat: no-repeat;
     }
-    
+    &__list {
+        display: none;
+    }
+}
+
+.display {
+    background-position: 100% -21px;
 }

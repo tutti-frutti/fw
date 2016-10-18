@@ -15,6 +15,12 @@ $(document).ready(function() {
     
   });
     
+    $(".select__choice").click(function(event){
+        event.preventDefault();
+        $(".select__choice").toggleClass("display");
+        $(".select__list").slideToggle();
+    });
+    
     // скрипт для анимирования кнопки
     // используется .toggleClass для добавить/убрать класс "active"
     $("button").click(function(event){
