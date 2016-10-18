@@ -33,7 +33,6 @@ module.exports = function (grunt) {
                     "css/library.min.css": [
                     "js/slick/slick/slick.css",
                     "js/slick/slick/slick-theme.css",
-                    "js/fancy/source/jquery.fancybox.css"
                 ]
                 }
             }
@@ -126,13 +125,9 @@ module.exports = function (grunt) {
             },
             dist: {
                 // файлы для склеивания
-                src: ['js/slick/slick/slick.min.js',
-                    'js/fancy/source/jquery.fancybox.pack.js',
-                    'js/fancy/source/helpers/jquery.fancybox-media.js',
-                    'js/jquery.maskedinput.js',
-                    'js/threesixty.min.js'],
+                src: ['js/slick/slick/slick.min.js', 'js/desoslide/dist/js/jquery.desoslide.min.js', 'js/bxslider/jquery.bxslider.min.js'],
                 // где будут находиться склеенные файлы
-                dest: 'build/js/project.js'
+                dest: 'js/project.js'
             }
 
         },
@@ -143,7 +138,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     //минификация в той же папке, где и основной файл 
-                    "build/js/project.min.js": ['build/js/project.js']
+                    "js/project.min.js": ['js/project.js']
                 }
             }
         },
@@ -167,6 +162,8 @@ module.exports = function (grunt) {
     grunt.registerTask("serve", [
     "sass", 
     "csso",
+    "concat",
+    "uglify",
     "browserSync",
     "watch",
     "bake",
@@ -175,7 +172,5 @@ module.exports = function (grunt) {
     "clean",
     "copy",
     "postcss",
-    "concat",
-    "uglify",
   ]);
 };

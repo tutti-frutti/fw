@@ -22,6 +22,8 @@ li {
   list-style: none; }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 input {
@@ -384,7 +386,7 @@ button {
 
 .nav-fixed {
   position: fixed;
-  top: 5%;
+  top: 10%;
   right: 5%;
   text-align: left;
   z-index: 1; }
@@ -604,8 +606,7 @@ button {
       text-overflow: ellipsis; }
   .slider-content__wrapper {
     width: 250px;
-    -moz-column-width: 250px;
-         column-width: 250px;
+    column-width: 250px;
     height: 100%; }
 
 .slideshow-list {
@@ -664,12 +665,13 @@ button {
   .bg-attach__block-1 {
     width: 90%;
     height: 250px;
-    margin-right: 25px;
     padding: 10px;
+    margin: 0 auto;
     text-align: center; }
     .bg-attach__block-1_red {
       position: relative;
       background: red;
+      color: red;
       z-index: 1; }
   .bg-attach__medium {
     height: 350px;
@@ -677,10 +679,70 @@ button {
   .bg-attach__bottom {
     background: #605b86; }
 
+.hd-slider h3 {
+  color: #fff; }
+
+.hd-slider p {
+  color: #fff; }
+
+.hd-slider__img {
+  width: 100%;
+  height: 600px !important;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.hd-slider .slick-active p, .hd-slider .slick-active h3 {
+  color: #000;
+  animation-duration: 3s; }
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.hd-slider .slick-dots {
+  bottom: 25px; }
+  .hd-slider .slick-dots li {
+    width: 200px;
+    text-align: center; }
+    .hd-slider .slick-dots li:nth-child(1) button::before {
+      content: "Креатив" !important;
+      font-size: 30px !important;
+      margin-right: 30px;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-weight: bold;
+      opacity: 1;
+      color: #fff; }
+    .hd-slider .slick-dots li:nth-child(2) button::before {
+      content: "Успех" !important;
+      font-size: 30px !important;
+      margin-right: 30px;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-weight: bold;
+      opacity: 1;
+      color: #fff; }
+    .hd-slider .slick-dots li:nth-child(3) button::before {
+      content: "Вдохновение" !important;
+      font-size: 30px !important;
+      margin-right: 30px;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-weight: bold;
+      opacity: 1;
+      color: #fff; }
+
 body {
   background: #e1e1e1;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Roboto';
+  font-weight: 400; }
 
 .center {
   max-width: 940px;

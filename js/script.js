@@ -78,6 +78,13 @@ $(document).ready(function() {
 //        autoplay: true,
         vertical: true,
   });
+    
+    $('.hd-slider__content').slick({
+        dots: true,
+        pauseOnHover: true, // пауза прокрутки при наведении курсора
+//        autoplay: true,
+//        vertical: true,
+  });
     // ============================================================
     
     $('#slideshow').desoSlide({
