@@ -1,0 +1,31 @@
+.language {
+    &__list {
+        position: relative;
+        li {
+            @include list-inl(10px);
+        }
+    }
+    &__sub-list {
+        display: none;
+        position: absolute;
+        li {
+            display: block;
+            &:nth-child(1) {
+                background: url('../img/fl-en.jpg') 0 0 no-repeat;
+                
+            }
+        }
+    }
+}
+
+//.act-england {
+//            position: relative;
+//            &::before {
+//                position: absolute;
+//                content: '';
+//                top: 0;
+//                left: 30px;
+//                width: 61px;
+//                height: 43px;
+//            }
+//        }

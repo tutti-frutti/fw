@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 @import "blocks/accordion.scss";
 @import "blocks/tab.scss";
@@ -20,5 +21,6 @@
 @import "blocks/bg-attach.scss";
 @import "blocks/hd-slider.scss";
 @import "blocks/select.scss";
+@import "blocks/language.scss";
 
 @import "global/scaffolding.scss";

@@ -14,11 +14,38 @@ $(document).ready(function() {
     $('.accordion-tab>.left__subitem').hide();
     
   });
-    
-    $(".select__choice").click(function(event){
+    // скрипт для select
+    $(".select__doors").click(function(event){
         event.preventDefault();
-        $(".select__choice").toggleClass("display");
-        $(".select__list").slideToggle();
+        $(".select__doors").toggleClass("display");
+        $(".select__list-1").slideToggle();
+    });
+    $(".select__material").click(function(event){
+        event.preventDefault();
+        $(".select__material").toggleClass("display");
+        $(".select__list-2").slideToggle();
+    });
+    
+    // скрипт для выбора языка
+    $('.language__click').click(function(event){
+        event.preventDefault();
+        $('.language__sub-list').slideToggle();
+    });
+    
+    // скрипт отображения значения языков из 'data-lang'
+    $('.language__sub-list').on('click', '.language__sub-link',function(e){
+        // .on --- Устанавливает обработчики событий на выбранные элементы страницы. 
+        // 1. в этом слчае мы можем выбрать блок и классы ссылок в этом блоке.
+        var lang = $(this).attr('data-lang');
+        // .attr --- возвращает или изменяет значение атрибутов у выбранных элементов страницы.
+        // $(this) --- объект по которому произошло событие
+        // 2. берем значение атрибута data-lang и добавляем в переменную 'lang'.
+        $('.language__click').text(lang);
+        // .text --- возвращает или изменяет текстовое содержимое выбранных элементов страницы.
+        // 3. выбираем ссылку '.language__click' и меняем текстовое содержимое на 
+        $('.language__click').addClass('act-england');
+        $(".language__sub-list").slideUp();
+        e.preventDefault();
     });
     
     // скрипт для анимирования кнопки
