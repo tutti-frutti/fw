@@ -1,0 +1,38 @@
+.goods {
+    &-nav {
+        display: inline-block;
+        width: 30%;
+        height: 100%;
+        vertical-align: top;
+        background: #9f9e9d;
+    }
+    &-content {
+        position: relative;
+        display: inline-block;
+        width: 69%;
+        height: 100%;
+        vertical-align: top;
+        background: #ababab;
+    }
+}
+
+// STYLES FOR PHONES BLOCK
+
+.phones {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 41%;
+    &__col-1,
+    &__col-2,
+    &__col-3, 
+    &__col-4 {
+        display: inline-block;
+        width: 22%;
+        vertical-align: top;
+    }
+}
+
+.js-display {
+    display: block;
+}

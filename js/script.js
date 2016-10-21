@@ -55,6 +55,11 @@ $(document).ready(function() {
         $("span").toggleClass("active");
     });
     
+    // скрипт для блока с товарами
+    $('.goods-nav__list').on('mouseenter', '.goods-nav__list a',function(e){
+        $('.phones').toggleClass('js-display');
+    });
+    
     // скрипт для моб меню
     // добавляем/убираем класс "show", которому в css прописанны параметры для меню 
     $(".menu-open").click(function(event){

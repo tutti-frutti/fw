@@ -1,4 +1,8 @@
 .language {
+    width: 600px;
+    margin: 30px auto 0;
+    text-align: center;
+    border: 1px solid #a0a0a0;
     &__list {
         position: relative;
         li {
@@ -10,22 +14,70 @@
         position: absolute;
         li {
             display: block;
-            &:nth-child(1) {
-                background: url('../img/fl-en.jpg') 0 0 no-repeat;
-                
-            }
+//            &:nth-child(1) {
+//                background: url('../img/fl-en.jpg') 0 0 no-repeat;
+//                
+//            }
         }
     }
 }
 
-//.act-england {
-//            position: relative;
-//            &::before {
-//                position: absolute;
-//                content: '';
-//                top: 0;
-//                left: 30px;
-//                width: 61px;
-//                height: 43px;
-//            }
-//        }
+a[data-lang="EN"] {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -11px;
+        width: 30px;
+        height: 20px;
+        background: url('../img/fl-en.jpg') 0 0 no-repeat;
+    }
+}
+
+a[data-lang="UA"] {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 30px;
+        right: -11px;
+        width: 30px;
+        height: 20px;
+        background: url('../img/fl-ua.jpg') 0 0 no-repeat;
+    }
+}
+
+a[data-lang="IT"] {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 60px;
+        right: -11px;
+        width: 30px;
+        height: 20px;
+        background: url('../img/fl-it.jpg') 0 0 no-repeat;
+    }
+}
+
+.exp {
+    position: relative;
+    display: inline-block;
+    &:hover {
+        &::before {
+        position: absolute;
+        content: attr(data-descr);
+        padding: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: red;
+        z-index: 100;
+    }
+    }
+    
+}
