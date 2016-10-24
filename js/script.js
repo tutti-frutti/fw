@@ -14,6 +14,18 @@ $(document).ready(function() {
     $('.accordion-tab>.left__subitem').hide();
     
   });
+    
+    // скрипт для sticky header
+    $(window).scroll(function() {
+if ($(this).scrollTop() > 250){  
+    $('header').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+  }
+});
+
+    
     // скрипт для select
     $(".select__doors").click(function(event){
         event.preventDefault();
@@ -42,7 +54,7 @@ $(document).ready(function() {
         // 2. берем значение атрибута data-lang и добавляем в переменную 'lang'.
         $('.language__click').text(lang);
         // .text --- возвращает или изменяет текстовое содержимое выбранных элементов страницы.
-        // 3. выбираем ссылку '.language__click' и меняем текстовое содержимое на 
+        // 3. выбираем ссылку '.language__click' и меняем текстовое содержимое на значение атрибута в 'data-lang'
         $('.language__click').addClass('act-england');
         $(".language__sub-list").slideUp();
         e.preventDefault();
@@ -56,9 +68,33 @@ $(document).ready(function() {
     });
     
     // скрипт для блока с товарами
-    $('.goods-nav__list').on('mouseenter', '.goods-nav__list a',function(e){
-        $('.phones').toggleClass('js-display');
+    $('#phones-block').mouseenter(function(e){
+        $('#phones').css('display', 'block');
+        $('.link').siblings().mouseenter(function(e){
+            $('#phones').css('display', 'none');
+        });
+//        $('#tablet-block').mouseenter(function(e){
+//        $('#tablet').css('display', 'block');
+//           $('#gadget-block').mouseenter(function(e){
+//            $('#tablet').css('display', 'none');
+//        }); 
+//        $('#tablet-block').mouseenter(function(e){
+//            $('#phones').css('display', 'none');
+//        });
+            
+            
     });
+//    $('#tablet-block').mouseenter(function(e){
+//        $('#tablet').css('display', 'block');
+//        if ( $('#tablet-block').mouseenter() )
+//            {
+//            $('#phones').css('display', 'none');
+//            }
+//    });
+    
+//    $('.bl-link').hover(function(){
+//        $($(this).data('id')).css('display', 'block');
+//    });
     
     // скрипт для моб меню
     // добавляем/убираем класс "show", которому в css прописанны параметры для меню 
@@ -66,6 +102,12 @@ $(document).ready(function() {
         event.preventDefault;
         $(".menu__list").toggleClass("show");
     });
+    
+//    $(".js-link").hover(function() {
+//     $(".js-block").css('display', 'block');
+//}, function() {
+//     $(".js-block").css('display', 'none');
+//});
     
     
     // скрипт для меню, которое выезжает слева ================================

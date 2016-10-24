@@ -40,16 +40,16 @@
            </div>
            <div class="goods-nav__body">
                <ul class="goods-nav__list">
-                   <li><a href="#">Смартфоны и телефоны</a></li>
-                   <li><a href="#">Планшеты</a></li>
-                   <li><a href="#">Гаджеты</a></li>
-                   <li><a href="#">Ноутбуки</a></li>
-                   <li><a href="#">Телевизоры и фото</a></li>
-                   <li><a href="#">Бытовая техника</a></li>
-                   <li><a href="#">Спорт и туризм</a></li>
-                   <li><a href="#">Товары для детей</a></li>
-                   <li><a href="#">Автотовары</a></li>
-                   <li><a href="#">Косметика</a></li>
+                   <li><a id="phones-block" class="link" href="#">Смартфоны</a></li>
+                   <li><a id="tablet-block" class="link" href="#">Планшеты</a></li>
+                   <li><a id="gadget-block" class="link" href="#">Гаджеты</a></li>
+                   <li><a class="link" href="#">Ноутбуки</a></li>
+                   <li><a class="link" href="#">Телевизоры и фото</a></li>
+                   <li><a class="link" href="#">Бытовая техника</a></li>
+                   <li><a class="link" href="#">Спорт и туризм</a></li>
+                   <li><a class="link" href="#">Товары для детей</a></li>
+                   <li><a class="link" href="#">Автотовары</a></li>
+                   <li><a class="link" href="#">Косметика</a></li>
                </ul>
            </div><!--./goods-nav__body-->
        </div><!--./goods-nav-->
@@ -60,12 +60,43 @@
    </div><!--./goods-->
    
     <!-- smartphones hidden by default -->
+   <div class="js-block phones" id="phones">
+       <div class="phones__wrapper">
+           ТЕЛЕФОНЫ
+       </div><!--./phones__wrapper-->
+   </div><!--./phones-->
+   
+    <!--TABLET block-->
+    <div class=" tablet" id="tablet">
+       <div class="phones__wrapper">
+           ПЛАНШЕТЫ
+       </div><!--./tablet__wrapper-->
+   </div><!--./tablet-->
+   
+   <!--GADGET block-->
+    <div class="gadget gadget" id="gadget">
+       <div class="gadget__wrapper">
+           ГАДЖЕТЫ
+       </div><!--./gadget__wrapper-->
+   </div><!--./gadget-->
+
+</div><!--Center end-->
+
+
+<script src="js/script.js"></script>
+</main>
+</body>
+
+</html>
+
+
+<!--
    <div class="phones" id="phones">
        <div class="phones__wrapper">
            <div class="phones__col-1">
                <div class="phones__smart">
                    <h3>Смартфоны</h3>
-                   <ul class="phones__smart-list">
+                   <ul class="phones__smart-list _margin">
                        <li><a href="#">smartphone-brand-1</a></li>
                        <li><a href="#">smartphone-brand-2</a></li>
                        <li><a href="#">smartphone-brand-3</a></li>
@@ -77,7 +108,7 @@
                        <li><a href="#">smartphone-brand-9</a></li>
                        <li><a href="#">smartphone-brand-10</a></li>
                    </ul>
-               </div><!--./phones__smart-->
+               </div>
                <div class="phones__battery">
                    <h3>Батарея</h3>
                    <ul class="phones__battery-list">
@@ -85,8 +116,8 @@
                        <li><a href="#">Батарейка-2</a></li>
                        <li><a href="#">Батарейка-3</a></li>
                    </ul>
-               </div><!--./phones__battery-->
-           </div><!--./phones__col-1-->
+               </div>
+           </div>
            <div class="phones__col-2">
                <div class="phones__tels">
                    <h3>Обычные телефоны</h3>
@@ -102,7 +133,7 @@
                        <li><a href="#">tels-ussual-9</a></li>
                        <li><a href="#">tels-ussual-10</a></li>
                    </ul>
-               </div><!--./phones__tels-->
+               </div>
                <div class="phones__accessories">
                    <h3>Батарея</h3>
                    <ul class="phones__accessories-list">
@@ -112,8 +143,8 @@
                        <li><a href="#">accessories-3</a></li>
                        <li><a href="#">accessories-3</a></li>
                    </ul>
-               </div><!--./phones__accessories-->
-           </div><!--./phones__col-2-->
+               </div>
+           </div>
            <div class="phones__col-3">
                <div class="phones__start">
                    <h3>Стартовые пакеты</h3>
@@ -124,7 +155,7 @@
                        <li><a href="#">Стартовые пакеты-4</a></li>
                        <li><a href="#">Стартовые пакеты-5</a></li>
                    </ul>
-               </div><!--./phones__tels-->
+               </div>
                <div class="phones__headphones">
                    <h3>Наушники</h3>
                    <ul class="phones__headphones-list">
@@ -137,8 +168,8 @@
                        <li><a href="#">headphones-3</a></li>
                        <li><a href="#">headphones-3</a></li>
                    </ul>
-               </div><!--./phones__headphones-->
-           </div><!--./phones__col-3-->
+               </div>
+           </div>
            <div class="phones__col-4">
                <div class="phones__t-home">
                    <h3>Стартовые пакеты</h3>
@@ -149,7 +180,7 @@
                        <li><a href="#">Домашние телефоны-4</a></li>
                        <li><a href="#">Домашние телефоны-5</a></li>
                    </ul>
-               </div><!--./phones__t-home-->
+               </div>
                <div class="phones__pieces">
                    <h3>Наушники</h3>
                    <ul class="phones__pieces-list">
@@ -162,16 +193,7 @@
                        <li><a href="#">headphones-3</a></li>
                        <li><a href="#">headphones-3</a></li>
                    </ul>
-               </div><!--./phones__pieces-->
-           </div><!--./phones__col-4-->
-       </div><!--./phones__wrapper-->
-   </div><!--./phones-->
-
-</div><!--Center end-->
-
-
-<script src="js/script.js"></script>
-</main>
-</body>
-
-</html>
+               </div>
+           </div>
+       </div>
+   </div>-->
