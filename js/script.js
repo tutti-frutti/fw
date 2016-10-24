@@ -1,51 +1,48 @@
-$(document).ready(function() {
-   
-    $('.accordion-tab>.accordion-descr').not(':first').hide();
-       $('.accordion-tab>.accordion-link').click(function(){
-    var findArticle = $(this).next();
-    var findWrapper = $(this).closest('.accordion-tab');
-    if (findArticle.is(':visible')) {
-      findArticle.slideUp('slow');
-    }
-    else {
-      findWrapper.find('>.accordion-descr').slideUp();
-        findArticle.slideDown();
-    }
-    $('.accordion-tab>.left__subitem').hide();
-    
-  });
-    
-    // скрипт для sticky header
-    $(window).scroll(function() {
-if ($(this).scrollTop() > 250){  
-    $('header').addClass("sticky");
-  }
-  else{
-    $('header').removeClass("sticky");
-  }
-});
+$(document).ready(function () {
 
-    
+    $('.accordion-tab>.accordion-descr').not(':first').hide();
+    $('.accordion-tab>.accordion-link').click(function () {
+        var findArticle = $(this).next();
+        var findWrapper = $(this).closest('.accordion-tab');
+        if (findArticle.is(':visible')) {
+            findArticle.slideUp('slow');
+        } else {
+            findWrapper.find('>.accordion-descr').slideUp();
+            findArticle.slideDown();
+        }
+        $('.accordion-tab>.left__subitem').hide();
+
+    });
+
+    // скрипт для sticky header
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('header').addClass("sticky");
+        } else {
+            $('header').removeClass("sticky");
+        }
+    });
+
     // скрипт для select
-    $(".select__doors").click(function(event){
+    $(".select__doors").click(function (event) {
         event.preventDefault();
         $(".select__doors").toggleClass("display");
         $(".select__list-1").slideToggle();
     });
-    $(".select__material").click(function(event){
+    $(".select__material").click(function (event) {
         event.preventDefault();
         $(".select__material").toggleClass("display");
         $(".select__list-2").slideToggle();
     });
-    
+
     // скрипт для выбора языка
-    $('.language__click').click(function(event){
+    $('.language__click').click(function (event) {
         event.preventDefault();
         $('.language__sub-list').slideToggle();
     });
-    
+
     // скрипт отображения значения языков из 'data-lang'
-    $('.language__sub-list').on('click', '.language__sub-link',function(e){
+    $('.language__sub-list').on('click', '.language__sub-link', function (e) {
         // .on --- Устанавливает обработчики событий на выбранные элементы страницы. 
         // 1. в этом слчае мы можем выбрать блок и классы ссылок в этом блоке.
         var lang = $(this).attr('data-lang');
@@ -59,130 +56,112 @@ if ($(this).scrollTop() > 250){
         $(".language__sub-list").slideUp();
         e.preventDefault();
     });
-    
+
     // скрипт для анимирования кнопки
     // используется .toggleClass для добавить/убрать класс "active"
-    $("button").click(function(event){
+    $("button").click(function (event) {
         event.preventDefault();
         $("span").toggleClass("active");
     });
-    
+
+    // скрипт для left side navbar
+    $("[data-toggle]").click(function () {
+        var toggle_el = $(this).data("toggle");
+        $(toggle_el).toggleClass("open-sidebar");
+    });
+
+
     // скрипт для блока с товарами
-    $('#phones-block').mouseenter(function(e){
+    $('#phones-block').mouseenter(function (e) {
         $('#phones').css('display', 'block');
-        $('.link').siblings().mouseenter(function(e){
+        $('.link').siblings().mouseenter(function (e) {
             $('#phones').css('display', 'none');
         });
-//        $('#tablet-block').mouseenter(function(e){
-//        $('#tablet').css('display', 'block');
-//           $('#gadget-block').mouseenter(function(e){
-//            $('#tablet').css('display', 'none');
-//        }); 
-//        $('#tablet-block').mouseenter(function(e){
-//            $('#phones').css('display', 'none');
-//        });
-            
-            
+        //        $('#tablet-block').mouseenter(function(e){
+        //        $('#tablet').css('display', 'block');
+        //           $('#gadget-block').mouseenter(function(e){
+        //            $('#tablet').css('display', 'none');
+        //        }); 
+        //        $('#tablet-block').mouseenter(function(e){
+        //            $('#phones').css('display', 'none');
+        //        });
+
+
     });
-//    $('#tablet-block').mouseenter(function(e){
-//        $('#tablet').css('display', 'block');
-//        if ( $('#tablet-block').mouseenter() )
-//            {
-//            $('#phones').css('display', 'none');
-//            }
-//    });
-    
-//    $('.bl-link').hover(function(){
-//        $($(this).data('id')).css('display', 'block');
-//    });
-    
+    //    $('#tablet-block').mouseenter(function(e){
+    //        $('#tablet').css('display', 'block');
+    //        if ( $('#tablet-block').mouseenter() )
+    //            {
+    //            $('#phones').css('display', 'none');
+    //            }
+    //    });
+
+    //    $('.bl-link').hover(function(){
+    //        $($(this).data('id')).css('display', 'block');
+    //    });
+
     // скрипт для моб меню
     // добавляем/убираем класс "show", которому в css прописанны параметры для меню 
-    $(".menu-open").click(function(event){
+    $(".menu-open").click(function (event) {
         event.preventDefault;
         $(".menu__list").toggleClass("show");
     });
-    
-//    $(".js-link").hover(function() {
-//     $(".js-block").css('display', 'block');
-//}, function() {
-//     $(".js-block").css('display', 'none');
-//});
-    
-    
-    // скрипт для меню, которое выезжает слева ================================
-//    $(".menu-open").click(function(event){
-//        event.preventDefault;
-//        $(".sidenav").css("width", "100%");
-//    });
-//    $(".menu-close").click(function(event){
-//        event.preventDefault;
-//            $(".sidenav").css("width", "0");
-//    });
-    // скрипт для меню, которое выезжает слева ================================
-    
-    $(".menu-open").click(function(event){
+
+    $(".menu-open").click(function (event) {
         event.preventDefault;
         $(".sidenav").toggleClass("active");
     });
-//    $(".menu-close").click(function(event){
-//        event.preventDefault;
-//        $(".sidenav").removeClass("active");
-//    });
-    
-    // ============================================================
+
     // скрипт для "выезда" блока с формой и смены иконок при клике
-    
-    $(".search-icon").click(function(event){
+    $(".search-icon").click(function (event) {
         event.preventDefault;
         $(".site-search").slideToggle("1000"); // плавно открывает блок с формой
-        if($(".search-icon").hasClass("icon-open")) { // < условие!
+        if ($(".search-icon").hasClass("icon-open")) { // < условие!
             $(".search-icon").removeClass("icon-open");
             $(".search-icon").addClass("icon-close");
-        }
-        else {
+        } else {
             $(".search-icon").removeClass("icon-close");
             $(".search-icon").addClass("icon-open");
         }
-        
+
         // оба выражения "смотрят" на условие. тут, по логике кода обязательно есть какой-то один класс из двух. или icon-open или icon-close. с верхним выражением понятно --- если имеем класс icon-open, то убираем его и добавляем icon-close. во втором случае подразумевается, что, если не стоит класс icon-open --- значит стоит класс icon-close, а значит мы его убираем и добавляем icon-open.
-       // ============================================================ 
+        // ============================================================ 
     });
-    
+
     // ============================================================
     // slick-slider
-    
+
     $('.slider-content').slick({
         dots: true,
         pauseOnHover: true, // пауза прокрутки при наведении курсора
-//        autoplay: true,
+        //        autoplay: true,
         vertical: true,
-  });
-    
+    });
+
     $('.hd-slider__content').slick({
         dots: true,
         pauseOnHover: true, // пауза прокрутки при наведении курсора
-//        autoplay: true,
-//        vertical: true,
-  });
+        //        autoplay: true,
+        //        vertical: true,
+    });
     // ============================================================
-    
+
     $('#slideshow').desoSlide({
-    thumbs: $('ul.slideshow_thumbs li > a'),
-    effect: {
-        provider: null, // название типа анимации
-        name: 'none', // тип эффекта анимации
-    },
-    overlay: 'hover', // убирает полосу снизу на большом избр 
-    controls: {
-        show: true, // убирает контроллеры
-        keys: true, // управление с клавиатуры
-    },
-    auto: {
-        load: true, // предзагрузка фотографий
-        start: true, // автостарт слайдшоу
-    }
-});
+        thumbs: $('ul.slideshow_thumbs li > a'),
+        effect: {
+            provider: null, // название типа анимации
+            name: 'none', // тип эффекта анимации
+        },
+        overlay: 'hover', // убирает полосу снизу на большом избр 
+        controls: {
+            show: true, // убирает контроллеры
+            keys: true, // управление с клавиатуры
+        },
+        auto: {
+            load: true, // предзагрузка фотографий
+            start: true, // автостарт слайдшоу
+        }
+    });
     // ============================================================
     // bx-slider
     $('.bxslider').bxSlider({
@@ -196,7 +175,7 @@ if ($(this).scrollTop() > 250){
         autoControls: true,
     });
     // ============================================================
-    
+
 });
 
 
