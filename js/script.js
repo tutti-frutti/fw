@@ -17,9 +17,9 @@ $(document).ready(function () {
     // скрипт для sticky header
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            $('header').addClass("sticky");
+            $('.header__nav').addClass("sticky");
         } else {
-            $('header').removeClass("sticky");
+            $('.header__nav').removeClass("sticky");
         }
     });
 
@@ -69,14 +69,29 @@ $(document).ready(function () {
         var toggle_el = $(this).data("toggle");
         $(toggle_el).toggleClass("open-sidebar");
     });
+    
+    // скрипт для страницы товаров
+    $('[data-link]').mouseenter(function(){
+      var val=$(this).attr('data-link');
+    $('[data-content]').css('display', 'none');
+        $('[data-content="'+val+'"]').css('display', 'block');
+    });
+    
+    $(document).mouseup(function (e) {
+    var container = $('[data-content]');
+    if (container.has(e.target).length === 0){
+        container.hide();
+    }
+});
 
 
     // скрипт для блока с товарами
-    $('#phones-block').mouseenter(function (e) {
-        $('#phones').css('display', 'block');
-        $('.link').siblings().mouseenter(function (e) {
-            $('#phones').css('display', 'none');
-        });
+//    $('#phones-block').mouseenter(function (e) {
+//        $('#phones').addClass('js-display');
+//    });
+//        $('.link').siblings().mouseenter(function (e) {
+//            $('#phones').css('display', 'none');
+//        });
         //        $('#tablet-block').mouseenter(function(e){
         //        $('#tablet').css('display', 'block');
         //           $('#gadget-block').mouseenter(function(e){
@@ -87,7 +102,7 @@ $(document).ready(function () {
         //        });
 
 
-    });
+//    });
     //    $('#tablet-block').mouseenter(function(e){
     //        $('#tablet').css('display', 'block');
     //        if ( $('#tablet-block').mouseenter() )

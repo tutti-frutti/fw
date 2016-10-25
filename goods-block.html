@@ -40,45 +40,53 @@
            </div>
            <div class="goods-nav__body">
                <ul class="goods-nav__list">
-                   <li><a id="phones-block" class="link" href="#">Смартфоны</a></li>
-                   <li><a id="tablet-block" class="link" href="#">Планшеты</a></li>
-                   <li><a id="gadget-block" class="link" href="#">Гаджеты</a></li>
-                   <li><a class="link" href="#">Ноутбуки</a></li>
-                   <li><a class="link" href="#">Телевизоры и фото</a></li>
-                   <li><a class="link" href="#">Бытовая техника</a></li>
-                   <li><a class="link" href="#">Спорт и туризм</a></li>
-                   <li><a class="link" href="#">Товары для детей</a></li>
-                   <li><a class="link" href="#">Автотовары</a></li>
-                   <li><a class="link" href="#">Косметика</a></li>
+                   <li><a class="phones" data-link="1" href="#">Смартфоны</a></li>
+                   <li><a class="tablet" data-link="2" href="#">Планшеты</a></li>
+                   <li><a class="gadget" data-link="3" href="#">Гаджеты</a></li>
+                   <li><a class="laptop" data-link="4" href="#">Ноутбуки</a></li>
+                   <li><a class="tv" data-link="5" href="#">Телевизоры и фото</a></li>
                </ul>
            </div><!--./goods-nav__body-->
        </div><!--./goods-nav-->
        <div class="goods-content">
            <p>Основной контент страницы</p>
            <img src="" alt="">
-       </div><!--./goods-content-->
-   </div><!--./goods-->
+       
    
     <!-- smartphones hidden by default -->
-   <div class="js-block phones" id="phones">
+   <div data-content="1" class="c-phones">
        <div class="phones__wrapper">
            ТЕЛЕФОНЫ
        </div><!--./phones__wrapper-->
    </div><!--./phones-->
    
     <!--TABLET block-->
-    <div class=" tablet" id="tablet">
+    <div data-content="2" class="c-tablet">
        <div class="phones__wrapper">
            ПЛАНШЕТЫ
        </div><!--./tablet__wrapper-->
    </div><!--./tablet-->
    
    <!--GADGET block-->
-    <div class="gadget gadget" id="gadget">
+    <div data-content="3" class="c-gadget">
        <div class="gadget__wrapper">
            ГАДЖЕТЫ
        </div><!--./gadget__wrapper-->
    </div><!--./gadget-->
+   
+   <div data-content="4" class="c-laptop">
+       <div class="">
+           НОУТБУКИ
+       </div><!--./gadget__wrapper-->
+   </div><!--./gadget-->
+   
+   <div data-content="5" class="c-tv">
+       <div class="">
+           ТЕЛЕВИЗОРЫ И ФОТО
+       </div><!--./gadget__wrapper-->
+   </div><!--./gadget-->
+   </div><!--./goods-content-->
+   </div><!--./goods-->
 
 </div><!--Center end-->
 

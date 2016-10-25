@@ -28,38 +28,38 @@
     }
 }
 
-// STYLES FOR PHONES BLOCK
+// STYLES CATALOG BLOCK
 
-.phones,
-.tablet,
-.gadget{
+.c-phones,
+.c-tablet,
+.c-gadget,
+.c-laptop,
+.c-tv {
     display: none;
     position: absolute;
-    width: 613px;
+    width: 648px;
     height: 350px;
-    top: 5%;
-    left: 39%;
-    &__col-1,
-    &__col-2,
-    &__col-3, 
-    &__col-4 {
-        display: inline-block;
-        width: 22%;
-        vertical-align: top;
+    top: 100%;
+    left: 0%;
+    background: #50fdff;
     }
-}
-.phones {
+.c-phones {
     background: #458c00;
 }
 
-.tablet {
+.c-tablet {
     background: #5c50ff;
 }
 
-.gadget {
+.c-gadget {
     background: #50fdff;
 }
-
-.js-display {
-    display: block;
+.с-laptop {
+            background: #50fdff;
 }
+
+.c-tv {
+    background: red;
+}
+
+
