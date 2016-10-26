@@ -1,0 +1,49 @@
+.overview-card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background: #bbbbbb;
+    border-top: 1px solid transparent;
+    z-index: 1;
+    transition: .5s;
+    &:hover {
+        .overview-card__additional {
+            opacity: 1;
+            z-index: -1;
+            background: #bbbbbb;
+            transition: .5s;
+        }
+    }
+    &__wrapper {
+        border: 1px solid #000;
+    }
+    &__img {
+        height: 150px;
+        width: 210px;
+        margin: 15px auto;
+        background: #b9cdfa;
+    }
+    &__title {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    &__tech {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    &__price {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    &__additional {
+        position: absolute;
+        width: 270px;
+        height: 350px;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 0;
+        transition: .5s;
+    }
+}

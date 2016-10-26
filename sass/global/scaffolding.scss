@@ -1,11 +1,17 @@
 body, html {
+    height: 100%;
     background: #e1e1e1;
     margin: 0;
     font-family: 'Roboto';
     font-weight: 400;
 }
 
+main {
+    height: 100%;
+}
+
 .center {
+    height: 100%;
 	max-width: 940px;
     margin: 0 auto;
 }

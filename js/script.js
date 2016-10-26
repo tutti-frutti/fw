@@ -70,13 +70,15 @@ $(document).ready(function () {
         $(toggle_el).toggleClass("open-sidebar");
     });
     
-    // скрипт для страницы товаров
+    // скрипт для страницы товаров 
+    // 1. переключение блоков
     $('[data-link]').mouseenter(function(){
       var val=$(this).attr('data-link');
     $('[data-content]').css('display', 'none');
         $('[data-content="'+val+'"]').css('display', 'block');
     });
     
+    // 2. клик за пределами блока
     $(document).mouseup(function (e) {
     var container = $('[data-content]');
     if (container.has(e.target).length === 0){
