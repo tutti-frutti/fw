@@ -128,6 +128,16 @@ $(document).ready(function () {
         event.preventDefault;
         $(".sidenav").toggleClass("active");
     });
+    
+    // smooth scrolling
+    $(".anchor").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 100; // высота отступа от верхней границы
+        $('html, body').animate({
+            scrollTop: top
+        }, 1500);
+    });
 
     // скрипт для "выезда" блока с формой и смены иконок при клике
     $(".search-icon").click(function (event) {

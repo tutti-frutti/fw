@@ -1,0 +1,29 @@
+.test-button {
+//    background: #4f11ff;
+}
+.btn {
+    margin-top: 50px;
+    display: block;
+    width: 100px;
+    padding: 6px 16px;
+    font-size: 125%;
+    line-height: 1.5;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+    background-color: #58a linear-gradient (hsla
+                (0, 0%, 100%, .2), transparent);
+    border-radius: 4px;
+    color: white;
+    text-shadow: 0 .05em .25em rgba(0,0,0,.5);
+    &.general {
+//        background-color: #58a;
+    }
+    &.cansel {
+        background-color: red;
+    }
+    &.ok {
+        background-color: green;
+    }
+    &:hover {
+        opacity: .75;
+    }
+}
