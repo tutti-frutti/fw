@@ -1,21 +1,20 @@
 .test-button {
-//    background: #4f11ff;
+text-align: center;
 }
 .btn {
-    margin-top: 50px;
-    display: block;
+    display: inline-block;
+    margin: 10px 20px;
     width: 100px;
     padding: 6px 16px;
     font-size: 125%;
     line-height: 1.5;
     border-bottom: 3px solid rgba(0,0,0,.2);
-    background-color: #58a linear-gradient (hsla
-                (0, 0%, 100%, .2), transparent);
+    background-color: #58a linear-gradient (hsla (0, 0%, 100%, .2), transparent);
     border-radius: 4px;
     color: white;
     text-shadow: 0 .05em .25em rgba(0,0,0,.5);
     &.general {
-//        background-color: #58a;
+        background-color: #58a;
     }
     &.cansel {
         background-color: red;
@@ -26,4 +25,118 @@
     &:hover {
         opacity: .75;
     }
+}
+
+// semitransparent frame
+
+.frame {
+    margin: 0 auto;
+    width: 350px;
+    height: 250px;
+    border-top: 1px solid #fff;
+    background: url('../img/11.jpg') center no-repeat;
+    &__block {
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        border: 10px solid hsla(0,0%,100%,.5);
+        background: rgba(188, 71, 232, .8);
+        background-clip: padding-box; //Фон отображается внутри границ
+    }
+}
+
+// several-frames
+
+.several-frames {
+    margin: 0 auto;
+    width: 350px;
+    height: 250px;
+    border-top: 1px solid #fff;
+    background: #3b0051;
+    &__block {
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        background: #bc47e8;
+        box-shadow: inset 0 0 0 10px #655, inset 0 0 0 15px deeppink, inset 0 0 0 20px green;
+        &:hover {
+            box-shadow: inset 0 0 0 10px blue, inset 0 0 0 15px transparent, inset 0 0 0 20px transparent;
+        }
+    }
+    //Единственное, о чем необходимо помнить, — что рамки, создаваемые свойством box-shadow, накладываются друг на друга, причем наверху оказывается та, которая в строке значений указана первой. Например, в предыдущем коде нам нужна была внешняя рамка шириной 5px, поэтому мы указали радиус размазывания 15px (10px + 5px).
+    //тени работают не совсем так, как рамки: они не влияют на макет и на них не распространяется действие свойства box-sizing. Однако имитировать дополнительное пространство, которое заняла бы рамка, можно с помощью забивки или полей (в зависимости от того, определена тень как inset или нет);
+    //продемонстрированный выше метод позволяет создавать фальшивые «рамки» снаружи элементов. Подобные рамки не умеют перехватывать события мыши, такие как наведение или щелчок. Если это важно для вас, то можно добавлять ключевое слово inset, чтобы тени рисовались внутри элемента. Помните только, что вам придется добавить больше забивки, чтобы обеспечить необходимое пространство.
+}
+
+// outline-frames
+
+.outline-frames {
+    margin: 0 auto;
+    width: 350px;
+    height: 250px;
+    border-top: 1px solid #fff;
+    background: #009356;
+    &__block {
+        margin: 20px auto;
+        width: 150px;
+        height: 150px;
+        border: 3px dotted #655;
+        outline: 15px solid #007c2f;
+        background: #007c2f;
+    }
+    //как уже упоминалось выше, он подходит для определения только двух «рамок», так как свойство outline не принимает список значений, разделенных запятой.
+}
+
+// var 1-------------------
+//.bg-position {
+//    margin: 0 auto;
+//    width: 100%;
+//    height: 250px;
+//    border-top: 1px solid #fff;
+//    background: #009356 url('../img/copyright.png') no-repeat right bottom;
+//    background-position: right 20px bottom 50px;
+//    &__text {
+//        width: 100%;
+//        text-align: left;
+//    }
+//}
+// var 2-------------------
+.bg-position {
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid #fff;
+    background: #009356 url('../img/copyright.png') no-repeat right bottom;
+    background-position: right 20px bottom 20px;
+    background-origin: content-box;
+    &__text {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.round-insude {
+    margin: 0 auto;
+    padding: 10px;
+    width: 270px;
+    height: 170px;
+    border-top: 1px solid #fff;
+    background: #009356;
+    &__block {
+        padding: 10px;
+        width: 250px;
+        height: 150px;
+        border-radius: 15px;
+        background: #f38400;
+    }
+}
+// gradient-strips
+.gradient-strips {
+    margin: 0 auto;
+    width: 100%;
+    height: 170px;
+    border-top: 1px solid #fff;
+    background: linear-gradient(#fb3 65%, #fb9 5%, #58a 30%);
+    background-size: 100% 30px;
+    //градиенты — это всего лишь сгенерированные фоновые изображения, то с ними можно обходиться так же, как с любыми другими фоновыми изображениями, например, корректировать их размер с помощью background-size:
 }
