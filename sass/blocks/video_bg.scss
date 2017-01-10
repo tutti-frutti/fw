@@ -1,0 +1,36 @@
+.video_bg {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+//    background-size: cover;
+    z-index: -1000;
+}
+
+.video-search {
+    &._mb {
+        margin-top: 300px;
+    }
+    padding: 35px;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    background: rgba(18, 84, 57, .3);
+        input {
+            display: inline-block;
+            padding: 5px 20px;
+            width: 100%;
+            height: 35px;
+            border: 1px solid rgba(0, 0, 0, .3);
+            color: #fff;
+            background: rgba(201, 255, 209, .1);
+            transition: all .5s;
+            &:focus {
+                background: rgba(201, 255, 209, .5);
+                outline: none;
+        }
+    }
+}
