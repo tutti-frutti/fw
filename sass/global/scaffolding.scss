@@ -38,6 +38,12 @@ a {
     text-align: center;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .icon-arr-down {
   background-image: url(../img/sprites/arrows.png);
   background-position: 100% 0px;
