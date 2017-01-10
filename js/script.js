@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    $('.accordion-tab>.accordion-descr').not(':first').hide();
+    $('.accordion-tab>.accordion-descr').hide();
     $('.accordion-tab>.accordion-link').click(function () {
-        var findArticle = $(this).next();
-        var findWrapper = $(this).closest('.accordion-tab');
+        var findArticle = $(this).next(); // блок текста 'article.accordion-descr'
+        var findWrapper = $(this).closest('.accordion-tab'); // следующий блок-акк
         if (findArticle.is(':visible')) {
-            findArticle.slideUp('slow');
+            findArticle.slideUp();
         } else {
-            findWrapper.find('>.accordion-descr').slideUp();
+            findWrapper.find('>.accordion-descr').slideUp(); // ненужный повтор?
             findArticle.slideDown();
         }
         $('.accordion-tab>.left__subitem').hide();
@@ -127,6 +127,16 @@ $(document).ready(function () {
     $(".menu-open").click(function (event) {
         event.preventDefault;
         $(".sidenav").toggleClass("active");
+    });
+    
+    // smooth scrolling
+    $(".anchor").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 100; // высота отступа от верхней границы
+        $('html, body').animate({
+            scrollTop: top
+        }, 1500);
     });
 
     // скрипт для "выезда" блока с формой и смены иконок при клике

@@ -1,0 +1,26 @@
+.nav {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    height: 70px;
+    &__links {
+        display: table;
+        width: 100%;
+        text-align: center;
+        background: #d3d3d3;
+        li {
+            display: table-cell;
+            a {
+                display: block;
+                padding: 25px 1%;
+                &:hover {
+                    background: #ffe486;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__enter {
+        margin-left: 30px;
+    }
+}

@@ -1,15 +1,17 @@
 .overview-card {
     position: relative;
+    display: inline-block;
     width: 250px;
     height: 300px;
     background: #bbbbbb;
     border-top: 1px solid transparent;
-    z-index: 1;
+    z-index: 0;
     transition: .5s;
+    opacity: .99;
     &:hover {
         .overview-card__additional {
             opacity: 1;
-            z-index: -1;
+            z-index: 150;
             background: #bbbbbb;
             transition: .5s;
         }
@@ -38,12 +40,25 @@
     }
     &__additional {
         position: absolute;
-        width: 270px;
-        height: 350px;
+        width: 250px;
+        height: 400px;
+        line-height: 400px;
         left: 0;
         top: 0;
         opacity: 0;
-        z-index: 0;
+        z-index: 150;
         transition: .5s;
+        span {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: bottom;
+            margin-bottom: 30px;
+        }
+    }
+    &__compare,
+    &__set-aside,
+    &__book {
+//        display: inline-block;
+//        vertical-align: 100%;
     }
 }

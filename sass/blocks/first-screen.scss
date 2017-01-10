@@ -1,0 +1,45 @@
+.first-screen {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background: #93ceff;
+    &._decor {
+        height: 650px;
+    }
+    &__picture {
+        
+    }
+    &__descr {
+        text-align: center;
+    }
+    &__button {
+        display: table-row;
+        height: 100px;
+        vertical-align: bottom;
+    }
+    &__btn {
+        display: block;
+        margin: 30px auto 0;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        text-align: center;
+        background: #00528f;
+        color: #fff;
+    }
+}
+
+.second-screen {
+    &__main {
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        &._decor {
+            height: 450px;
+            background: #a7ffe3;
+        }
+    }
+}
