@@ -1,0 +1,106 @@
+.products {
+    margin-right: -20px;
+    &__item {
+        float: left;
+        width: 25%;
+        vertical-align: top;
+        transition: width .2s;
+    }
+    &__main {
+    }
+    &__descr {
+        display: block;
+	    border: 1px solid #b5e9a7;
+	    border-radius: 3px;
+	    position: relative;
+	    background: #fff;
+	    margin: 0 20px 20px 0;
+	    text-decoration: none;
+	    color: #474747;
+//	    height: 300px;
+	    z-index: 0;
+    }
+    &__foto {
+        position: relative;
+        display: block;
+        padding-bottom: 100%;
+        overflow: hidden;
+        img {
+            position: absolute;
+            display: block;
+	        top: 0;
+	        bottom: 0;
+	        left: 0;
+	        right: 0;
+	        max-width: 100%;
+	        max-height: 100%;
+	        margin: auto;
+	        transition: transform .4s ease-out;
+            z-index: 1;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__text {
+        display: block;
+        padding: 15px;
+        p {
+            position: relative;
+	        margin: 0;
+	        height: 90px;
+	        font-size: 16px;
+	        line-height: 1.4em;
+	        overflow: hidden;
+            &::after {
+                content: '';
+	            display: inline-block;
+	            position: absolute;
+	            bottom: 0;
+	            right: 0;
+	            width: 4.2em;
+	            height: 1.6em;
+	            background: linear-gradient(to left top, #fff, rgba(255, 255, 255, 0));
+            }
+        }
+    }
+    &__details {
+        display: block;
+        padding: 0 15px 15px 15px;
+        color: #474747;
+    }
+    &__avail {
+        display: block;
+        padding-left: 30px;
+    }
+    &__price-old {
+        text-decoration: line-through;
+        color: #ff3535;
+        b,
+        small {
+            color: #888;
+        }
+    }
+}
+
+.shop-bg {
+    background: url('../img/shop-texture2.jpg') center no-repeat;
+}
+
+.products-wrapper {
+	max-width: 1000px;
+    margin: 0 auto 100px;
+    font-family: 'Open Sans', sans-serif;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.product-header {
+    margin: 10px auto 30px;
+    max-width: 1000px;
+    height: 100px;
+    background: #fff;
+}
