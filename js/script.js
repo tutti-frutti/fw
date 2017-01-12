@@ -138,6 +138,19 @@ $(document).ready(function () {
             scrollTop: top
         }, 1500);
     });
+    
+    // переключение табличной раскладки
+    $('.js-table-layout').click(function(){
+        $('.js-table-layout').addClass('current');
+        $('ul.product').addClass('table-layout');
+        $('.js-standart').removeClass('current');
+    });
+    $('.js-standart').click(function(){
+        $('.js-standart').addClass('current');
+        $('ul.product').removeClass('table-layout');
+        $('.js-table-layout').removeClass('current');
+        
+    });
 
     // скрипт для "выезда" блока с формой и смены иконок при клике
     $(".search-icon").click(function (event) {
