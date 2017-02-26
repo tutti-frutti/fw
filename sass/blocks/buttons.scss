@@ -1,0 +1,203 @@
+.click {
+    &__container {
+        max-width: 800px;
+        width: 100%;
+        margin: 30px auto;
+        font-size: 0;
+    }
+    &__block {
+        display: inline-block;
+        vertical-align: top;
+        &._color-1 {
+            width: 33.33%;
+            height: 150px;
+            background: #86C7DB;
+        }
+        &._color-2 {
+            width: 33.33%;
+            height: 150px;
+            background: #008fb3;
+        }
+        &._color-3 {
+            width: 33.33%;
+            height: 150px;
+            background: #85AE52;
+        }
+        &._color-4 {
+            width: 100%;
+            height: 150px;
+            background: #007465;
+        }
+    }
+    // button decoration
+    // main styles for all click
+    .click-default {
+        position: relative;
+        display: block;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-left: auto;
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    //individual decoration for span moving
+    .click-decor {
+        border: 1px solid #000;
+        &::after {
+            position: absolute;
+            color: #fff;
+            content: attr(data-text);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            background: transparent;
+            transform: translate(0px, 26%);
+            transition: all 0.3s ease 0s;
+        }
+        span {
+            color: #0b0341;
+            transition: all 0.3s ease 0s;
+        }
+    }
+    .click-decor {
+        &:hover {
+            background: #675B99;
+            border: 1px solid #6f0a78;
+            &::after {
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+            span {
+                color: #fff;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                transition: all 0.3s ease 0s;
+                transform: translate(0px, -40px);
+            }
+        }
+    }
+    
+    // 1st - base style
+    .btn-new {
+        position: relative;
+        display: block;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 16px;
+        overflow: hidden;
+        cursor: pointer;
+//        transition: all 0.5s ease 0s;
+        transition: all .5s;
+    }
+    // 2nd - pseudo element base for all
+    .btn-new-after {
+        &::after {
+            position: absolute;
+            content: '';
+            transition: all 0.5s ease 0s;
+            z-index: -1;
+        }
+    }
+    // 3rd -  style for this button,
+    //        style for ::after
+    .btn-new-decor-1 {
+        border: 1px solid #675B99;
+        color: #000;
+        transition: all .5s;
+        z-index: 1;
+        &::after {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: #a449a1;
+        }
+    }
+    // 4th - hover effects
+    .btn-new-decor-1 {
+        &:hover {
+            color: #fff;
+            border: 1px solid #fff;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+    // button with elem i
+    .btn-new {
+        span {
+            position: absolute;
+            transition: .3s;
+            left: 40%;
+        }
+        i {
+            position: absolute;
+            top: 33%;
+            right: 20%;
+            opacity: 0;
+            transition: .3s;
+        }
+    }
+    .btn-new {
+        &:hover {
+            span {
+                left: 35%;
+            }
+            i {
+                right: 17%;
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    }
+    // two lines
+    .btn-lines {
+        color: #fff;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 1px;
+            width: 0;
+            background: #fff;
+            transition: .7s;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background: #fff;
+            transition: .7s;
+        }
+    }
+    .btn-lines {
+        &:hover {
+            background: #00453c;
+            &::before,
+            &::after {
+                width: 100%;
+            } 
+        }
+    }
+}
