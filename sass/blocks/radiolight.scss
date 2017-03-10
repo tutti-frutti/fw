@@ -4,7 +4,7 @@
     width: 100%;
     margin: 100px auto;
 //    border: 1px solid #eae9e9;
-    border: 1px solid red;
+    border: 1px solid #e1e1e1;
     &__item {
         position: relative;
     }
@@ -21,10 +21,10 @@
     &__price {
         display: table-cell;
         vertical-align: middle;
+        padding: 10px 0;
     }
     &__input {
         width: 35px;
-        padding: 15px 0;
     }
     &__title {
         width: 50%;
@@ -34,21 +34,23 @@
         width: 22%;
     }
     &__input {
-        &:checked~.radiolight__wrap {
+        &:checked ~ .radiolight__wrap {
             background: #f9edbf;
-            border-top: 1px solid #ea955c;
-            border-bottom: 1px solid #ea955c;
+            border-top: 1px solid #ababab;
+            border-bottom: 1px solid #ababab;
         }
     }
     input[type="radio"] {
         position: absolute;
         display: block;
-        margin-top: -8px;
-        top: 50%;
-        left: 3px;
-        width: 15px;
-        height: 15px;
+        top: 10px;
+        left: -3px;
         cursor: pointer;
         outline: none;
+    }
+    label {
+        display: block;
+        padding: 0;
+        background: transparent;
     }
 }

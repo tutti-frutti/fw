@@ -170,51 +170,52 @@ $(document).ready(function () {
 
     // ============================================================
     // slick-slider
-
-    $('.slider-content').slick({
-        dots: true,
-        pauseOnHover: true, // пауза прокрутки при наведении курсора
-        //        autoplay: true,
-        vertical: true,
-    });
-
-    $('.hd-slider__content').slick({
-        dots: true,
-        pauseOnHover: true, // пауза прокрутки при наведении курсора
-        //        autoplay: true,
-        //        vertical: true,
-    });
+//
+//    $('.slider-content').slick({
+//        dots: true,
+//        pauseOnHover: true, // 
+//        vertical: true,
+//    });
+//
+//    $('.hd-slider__content').slick({
+//        dots: true,
+//        pauseOnHover: true, // п
+//    });
     // ============================================================
 
-    $('#slideshow').desoSlide({
-        thumbs: $('ul.slideshow_thumbs li > a'),
-        effect: {
-            provider: null, // название типа анимации
-            name: 'none', // тип эффекта анимации
-        },
-        overlay: 'hover', // убирает полосу снизу на большом избр 
-        controls: {
-            show: true, // убирает контроллеры
-            keys: true, // управление с клавиатуры
-        },
-        auto: {
-            load: true, // предзагрузка фотографий
-            start: true, // автостарт слайдшоу
-        }
-    });
+//    $('#slideshow').desoSlide({
+//        thumbs: $('ul.slideshow_thumbs li > a'),
+//        effect: {
+//            provider: null, // название типа анимации
+//            name: 'none', // тип эффекта анимации
+//        },
+//        overlay: 'hover', // убирает полосу снизу на большом избр 
+//        controls: {
+//            show: true, // убирает контроллеры
+//            keys: true, // управление с клавиатуры
+//        },
+//        auto: {
+//            load: true, // предзагрузка фотографий
+//            start: true, // автостарт слайдшоу
+//        }
+//    });
     // ============================================================
     // bx-slider
-    $('.bxslider').bxSlider({
-        mode: 'vertical',
-        adaptiveHeight: false,
-        responsive: false,
-        pagerCustom: '#bx-pager', // для отображения thumb
-        pagerType: 'full', // при 'short' меняет на цифры
-        pagerSelector: 'jQuery selector',
-        controls: true, // убирает/добавляет стрелки на слайдер
-        autoControls: true,
-    });
+//    $('.bxslider').bxSlider({
+//        mode: 'vertical',
+//        adaptiveHeight: false,
+//        responsive: false,
+//        pagerCustom: '#bx-pager', // для отображения thumb
+//        pagerType: 'full', // при 'short' меняет на цифры
+//        pagerSelector: 'jQuery selector',
+//        controls: true, // убирает/добавляет стрелки на слайдер
+//        autoControls: true,
+//    });
     // ============================================================
+    
+    $('a.icons__block').hover(function(){
+       $(this).children('.icons__moving').toggleClass('animated swing');
+    });
 
 });
 
