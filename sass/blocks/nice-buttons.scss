@@ -1,0 +1,76 @@
+.nice {
+    position: relative;
+    display: block;
+    margin: 50px auto 0;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s;
+    // appear with data- "span"
+    &.go-out {
+        border: 1px solid #000;
+        &::after {
+            position: absolute;
+            color: #fff;
+            content: attr(data-text);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            background: transparent;
+            transform: translate(0px, 26%);
+            transition: all 0.3s ease 0s;
+        }
+        span {
+            color: #0b0341;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            background: #675B99;
+            border: 1px solid #6f0a78;
+            &::after {
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+            span {
+                color: #fff;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                transition: all 0.3s ease 0s;
+                transform: translate(0px, -40px);
+            }
+        }
+    }
+    // left to right
+    &.fill-right {
+        border: 1px solid #675B99;
+        color: #000;
+        transition: all .5s;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            content: '';
+            transition: all 0.5s ease 0s;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: #a449a1;
+        }
+        &:hover {
+            color: #fff;
+            border: 1px solid #fff;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

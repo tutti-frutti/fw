@@ -1,0 +1,26 @@
+.portfolio {
+    height: 100vh;
+    &__item {
+        position: relative;
+        float: left;
+        height: 50%;
+        width: 50%;
+        background-size: cover;
+        text-align: left;
+        @media #{$mobile} {
+            width: 100%;
+        }
+        &.img-1 {
+            background: url(/img/cities/img-1.jpg) center no-repeat;
+        }
+        &.img-2 {
+            background: url(/img/cities/img-2.jpg) center / cover no-repeat;
+        }
+        &.img-3 {
+            background: url(/img/cities/img-3.jpg) center / cover no-repeat;
+        }
+        &.img-4 {
+            background: url(/img/cities/img-4.jpg) center / cover no-repeat;
+        }
+    }
+}
